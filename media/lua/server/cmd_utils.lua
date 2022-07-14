@@ -2,7 +2,7 @@
 --- @param y - The y coordinate. (In World-Space)
 --- @param attemptsMax - (Optional) The maximum amount of random attempts. (Default: 128)
 --- @return - The next random square.
-local getRandomZSquare = function(x, y, attemptsMax)
+getRandomZSquare = function(x, y, attemptsMax)
     if attemptsMax == nil then attemptsMax = 128 end
     local attempts = 0
     local square = nil

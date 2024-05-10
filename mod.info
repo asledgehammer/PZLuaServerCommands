@@ -1,5 +1,5 @@
 name=Extra Commands
 poster=preview.png
 description=e
-id=lua_server_commands_extra
-require=lua_server_commands
+id=extra_commands
+require=lua_commands

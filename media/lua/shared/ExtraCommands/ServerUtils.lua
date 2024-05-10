@@ -398,7 +398,7 @@ function mod.getBuildingsAt(x, y, radius)
     local index = 1;
     for wy = y1, y2, 4 do
         for wx = x1, x2, 4 do
-            local square = mod.getSquare(wx, wy, 0);
+            local square = getSquare(wx, wy, 0);
             if square ~= nil then
                 local building = square:getBuilding()
                 if building ~= nil and mod.arrayContains(buildings, building) == false then

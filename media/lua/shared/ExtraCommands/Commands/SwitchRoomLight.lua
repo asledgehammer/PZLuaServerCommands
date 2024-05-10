@@ -1,5 +1,5 @@
 -- Import these modules to register and execute LuaCommands.
-local LuaCommands = require 'LuaCommands/LuaCommands';
+require 'LuaCommands/LuaCommands';
 local ServerUtils = require 'ExtraCommands/ServerUtils';
 
 --- (Place your command name here)
@@ -58,12 +58,13 @@ end
 
 -- Register the command here.
 LuaCommands.register(CMD_NAME, function(author, command, args)
-    if isServer() then
-        return onServerCommand(author, args);
-    elseif ! isClient() then
-        return onSinglePlayerCommand(args);
+    if isClient() then
+        return nil
+    elseif isServer() then
+        return onServerCommand(author, args)
     end
-
-    -- Print to the console to see if this file is valid and executed.
-    print('Registered LuaCommand: ' .. CMD_NAME);
+    return onSinglePlayerCommand(args);
 end);
+
+-- Print to the console to see if this file is valid and executed.
+print('Registered LuaCommand: ' .. CMD_NAME);

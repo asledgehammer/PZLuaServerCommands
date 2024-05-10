@@ -36,6 +36,7 @@ local function onServerCommand(author, args)
     --       Make sure to reference the helper inside of the command's handler function.
     --
     -- local helper = LuaServerCommandHandler;
+    --- @cast helper LuaServerCommandHelper
 
     -- Execute the command in Server-mode here.
     return 'Command not supported in server mode.';

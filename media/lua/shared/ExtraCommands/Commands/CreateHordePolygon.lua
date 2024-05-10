@@ -26,6 +26,7 @@ local function onServerCommand(author, args)
     -- NOTE: The helper only becomes visible in global scope when the first lua server command is fired.
     --       Make sure to reference the helper inside of the command's handler function.
     local helper = LuaServerCommandHelper;
+    --- @cast helper LuaServerCommandHelper
 
     -- Attempt to resolve the player using the helper method.
     --- @type string
